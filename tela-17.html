@@ -24,6 +24,38 @@
                 <h1 style="font-size: 30px;">NÃO</h1>
             </div>
         </div>
+        <div>
+            <div id="janela_1"
+                style="width: 640px;height: 150px;background-color: #FFAC5A;position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;">
+                <div style="width: 590px;">
+                    <p>Muito bem! Também conhecida pelo nome em inglês brainstorming, é uma técnica de grupo orientada
+                        para
+                        gerar novas informações e promover o pensamento criativo. Nela, cada pessoa do grupo pode trazer
+                        livremente suas impressões e ideias sobre um determinado tema.</p>
+                    <p> Minayo e Costa (2018) ressaltam que é
+                        uma técnica que pode ser utilizada para definir o tema de um trabalho, para discutir conceitos
+                        novos, para tratar problemas e buscar soluções.</p>
+                </div>
+                <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                    <p>X</p>
+                </div>
+            </div>
+            <div id="janela_2"
+                style="width: 640px;height: 150px;background-color: #FFAC5A;position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;">
+                <div style="width: 590px;">
+                    <p>Não se preocupe, iremos te contar sobre essa metodologia! Também conhecida pelo nome em inglês
+                        brainstorming, é uma técnica de grupo orientada para gerar novas informações e promover o
+                        pensamento criativo. Nela, cada pessoa do grupo pode trazer livremente suas impressões e ideias
+                        sobre um determinado tema. </p>
+                    <p>Minayo e Costa (2018) ressaltam que é uma técnica que pode ser
+                        utilizada para definir o tema de um trabalho, para discutir conceitos novos, para tratar
+                        problemas e buscar soluções.</p>
+                </div>
+                <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                    <p>X</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <footer class="bg-footer" style="padding: 0; height: 40px;">
@@ -33,9 +65,8 @@
                 style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
                 <p style="font-weight: 900;font-size: 11px;">Unidade 1</p>
             </div>
-            <p style="font-size: 11px;width: 261px;margin-left: 10px;margin-top: 6px;">O SUS como processo histórico
-                em
-                construção: afirmar o direito à saúde com ênfase na equidade</p>
+            <p style="font-size: 11px;width: 210px;margin-left: 10px;margin-top: 6px;">Estudo de caso: identificando
+                domínios de equidade nas políticas de saúde</p>
         </div>
         <div style="display: flex;margin-right: 14px;">
             <div
@@ -46,3 +77,29 @@
         </div>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
+</div>
