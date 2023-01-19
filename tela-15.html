@@ -1,3 +1,33 @@
+<style>
+    #confetti {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100px;
+        left: -140px;
+        z-index: 100;
+        pointer-events: none;
+    }
+
+    .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+    }
+
+    .color1 {
+        background-color: #f00;
+    }
+
+    .color2 {
+        background-color: #0f0;
+    }
+
+    .color3 {
+        background-color: #00f;
+    }
+</style>
+<div id="confetti"></div>
 <div class="largura-1_1">
     <img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
     <div style="position: absolute;top: 11px;left: 96px;">
@@ -111,6 +141,7 @@
     </div>
 </footer>
 <script>
+
     $(() => {
         let posicoes = [{ top: "149px", left: "272px" }, { top: "149px", left: "612px" }, { top: "329px", left: "572px" }, { top: "329px", left: "239px" }, { top: "204px", left: "400px" }];
         var numbers = [1, 2, 3, 4, 5, 6];
@@ -149,8 +180,43 @@
             })
             if (mycount != sorteio.length) {
                 $("#btn_play").show();
+            } else {
+                animarConfete();
             }
         }
+
+        // função para criar confetes
+        function createConfetti() {
+            var color = Math.floor(Math.random() * 3) + 1;
+            var confetti = $("<div class='confetti color" + color + "'></div>");
+            confetti.css({
+                left: Math.random() * 100 + "%",
+                top: "-10px",
+                transform: "rotate(" + Math.random() * 360 + "deg)"
+            });
+            $("#confetti").append(confetti);
+
+            // animando o confete
+            confetti.animate({
+                top: "100%",
+                left: "+=100%",
+                rotation: "+=360"
+            }, 7000, "linear", function () {
+                confetti.remove();
+            });
+        }
+
+        // criando confetes
+
+        function animarConfete() {
+            var intervalId = setInterval(createConfetti, 50);
+            setTimeout(function () {
+                clearInterval(intervalId);
+            }, 5000);
+        }
+
+
+
     })
 </script>
 </div>
