@@ -54,14 +54,42 @@ function fecharIndice() {
 }
 
 /* Carregar e exibir Tela(Slide) */
+// function carregarTela(numeroTela) {
+//     telaAtual = parseInt(numeroTela);
+//     if (telaAtual > totalTelas) telaAtual = totalTelas;
+//     if (telaAtual < 1) telaAtual = 1;
+
+//     var url = "tela-" + telaAtual + ".html";
+//     $("#tela").load(url, atualizarNav);
+// }
+
+
+/* Carregar e exibir Tela(Slide) */
 function carregarTela(numeroTela) {
     telaAtual = parseInt(numeroTela);
     if (telaAtual > totalTelas) telaAtual = totalTelas;
     if (telaAtual < 1) telaAtual = 1;
 
     var url = "tela-" + telaAtual + ".html";
+    
     $("#tela").load(url, atualizarNav);
+    if(($(".nav-indice-lista").find("a[href='#tela-"+telaAtual+"']")).length){
+        $("a[href^='#tela-']").removeClass('active');
+        $("a[href='#tela-"+telaAtual+"']").addClass('active');
+    }else{
+        let pag = telaAtual;       
+        while ($(".nav-indice-lista").find("a[href='#tela-"+pag+"']").length==0) {
+            pag--;
+            console.log($(".nav-indice-lista").find("a[href='#tela-"+pag+"']").length);
+            if($(".nav-indice-lista").find("a[href='#tela-"+pag+"']").length){
+                $("a[href^='#tela-']").removeClass('active');
+                $("a[href='#tela-"+pag+"']").addClass('active');
+            }
+        }
+    }
 }
+
+
 function atualizarNav() {
     $botaoProxima.attr("href", "#tela-" + (telaAtual + 1));
     $botaoAnterior.attr("href", "#tela-" + (telaAtual - 1));

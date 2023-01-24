@@ -267,7 +267,7 @@ header hgroup {
     padding: 0;
 }
 
-.nav-indice-lista a:hover {
+.nav-indice-lista a:hover, .nav-indice-lista a.active {
     background-color: var(--color-blue1);
     color: var(--color-orange);
 }
