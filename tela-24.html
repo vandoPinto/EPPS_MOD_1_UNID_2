@@ -1,23 +1,19 @@
 <style>
-    form {
-        counter-reset: opcoes;
-        width: 540px;
-    }
-
     li {
         margin-bottom: 12px;
         margin-left: 18px;
     }
 
-    label {
-        font-size: 13px;
+    .questao:hover {
+        background-color: #FAC900;
+        cursor: pointer;
     }
 
     .marcado {
         background-color: #FAC900;
     }
 
-    .opWrong+label {
+    .opWrong {
         opacity: 0.5;
     }
 
@@ -36,117 +32,87 @@
         cursor: pointer;
         text-align: center;
     }
-
-    .vf {
-        border: none;
-        width: 18px;
-        margin-left: 5px;
-        text-transform: uppercase;
-        background-color: transparent;
-        font-weight: bolder;
-        color: var(--color-orange);
-    }
-
-    .vf:focus {
-        box-shadow: 0 0 0 0;
-        border: 0 none;
-        outline: 0;
-    }
 </style>
 <div class="largura-1_1">
     <img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
-</div>
-<div style="margin-top: 5px;margin-left: 19px;">
-    <h1>Questão 3</h1>
-    <p>Nem sempre é simples identificar e explicitar as barreiras de equidade nas políticas de saúde. Complete os
-        espaços com os números correspondentes e relembre as interferências mais recorrentes.</p>
-    <div style="display: flex;justify-content: space-between;margin-left: 20px;">
-        <form>
-            <input id="opc_1" type="text" size="1" name="opcao" class="12345" maxlength="1">
-            <label> Chama atenção para o conjunto de relações institucionais envolvidas no processo de
-                implementação,
-                envolvendo tanto articulações entre órgãos governamentais e organizações do setor privado e da
-                sociedade
-                civil.</label><br>
-            <input id="opc_2" type="text" size="1" name="opcao" class="12345" maxlength="1">
-            <label> Aponta para a existência e operação de mecanismos de participação social e para a representação
-                institucional de pontos de vistas e experiências de segmentos específicos do público nos processos
-                de
-                implementação.</label><br>
-            <input id="opc_3" type="text" size="1" name="opcao" class="12345" maxlength="1">
-            <label> Coloca em questão os processos de comunicação, divulgação e acesso à informação, visando à
-                mobilização das usuárias do programa/serviço. </label><br>
-            <input id="opc_4" type="text" size="1" name="opcao" class="12345" maxlength="1">
-            <label>Chama atenção para os momentos e experiências de interação entre as usuárias e os
-                serviços/programas.
-            </label><br>
-            <input id="opc_5" type="text" size="1" name="opcao" class="12345" maxlength="1">
-            <label>Chama atenção para os processos de monitoramento da execução e avaliação dos resultados e efeitos
-                da
-                política, serviço ou programa em questão. </label><br>
-        </form>
-        <p style="width: 260px;">
-            1 - Relações interinstitucionais e instrumentos de gestão inclusiva
-            <br><br>
-            2 - Monitoramento, avaliação e retroalimentação
-            <br><br>
-            3 - Interações e a experiência do usuário
-            <br><br>
-            4 - Comunicação, acesso à informação e mobilização
-            <br><br>
-            5 - Participação social e representação institucional
-        </p>
+    <div style="position: absolute;top: 11px;left: 96px;">
+        <p style="font-family: 'OpenSans', sans-serif;color: #08536A;font-size: 15px;font-weight: 900;">POLÍTICAS
+            PÚBLICAS EM SAÚDE</p>
+        <div
+            style="width: 250px;height: 2px;background: #FFAC5A 0% 0% no-repeat padding-box;margin-top: -13px;margin-left: -4px;">
+        </div>
     </div>
-    <div class="submeter" style="display: none;">Submeter</div>
-    <div style="margin-top: -280px; margin-left: 180px; width: 500px; height: 150px;" id="feedCerto">
-        <div class="objetivo animate__animated animate__pulse">
-            <div style="margin-top: 80px;">
-                <img class="icone-image" style="width: 11%; margin-right: -3%; margin-top: -24px;"
-                    src="recursos/icones/RM_M1A1_Icones10.svg">
-                <div class="box-click" style="width:450px;margin: 0;">
-                    <div class="line-box">
-                        <div style="margin-left: 20px;">
-                            <h1>Resposta correta</h1>
-                            <p style="margin-top: 15px;">
-                                Muito bem! As dimensões de análise visam cobrir diferentes facetas da relação entre
-                                processos de implementação e suas interfaces com a reprodução de desigualdades
-                                sociais.
-                                Isto é, tais dimensões apontam para diferentes formas de se perceber a manifestação
-                                de
-                                riscos de exclusão, desatenção e reprodução de desigualdades nos processos de
-                                implementação.
-                            </p>
+</div>
+<div class="coluna-direita largura-1_1">
+    <div style="width: 90%;margin: 28px auto;">
+        <h1>Questão 1</h1>
+        <p>No estudo da unidade, você viu que há algumas barreiras comuns à equidade em saúde. São elas:</p>
+        <p style="margin-left: 20px;margin-top: 41px;">
+            I- dificuldades no acesso a medicamentos.
+            <br><br>
+            II- dificuldades em garantir uma alimentação saudável e completa.
+            <br><br>
+            III- despreparo de profissionais para lidar com diversidade.
+        </p>
+        <p>Com base nas afirmações anteriores, é correto dizer que:</p>
+        <div style="margin-left: 20px;">
+            <p class="questao" id="opc_c">a) Todas as afirmativas estão corretas. </p>
+            <p class="questao" id="opc_e">b) A afirmativa III está incorreta. </p>
+            <p class="questao" id="opc_e">c) Apenas a afirmativa I está correta. </p>
+            <p class="questao" id="opc_e">d) As afirmativas I e III estão incorretas.</p>
+        </div>
+        <div class="submeter" style="width: 20%; margin-top: -10px; display: none;">Submeter</div>
+        <div style="position: absolute; width: 500px; left: 21%; top: 28%; height: 150px; display: none;"
+            id="feedCerto">
+            <div class="objetivo animate__animated animate__pulse">
+                <div>
+                    <img class="icone-image" style="width: 11%; margin-right: -6%; margin-top: -24px;"
+                        src="recursos/icones/RM_M1A1_Icones10.svg">
+                    <div class="box-click" style="width:468px; margin: 0;">
+                        <div class="line-box">
+                            <div style="margin-left: 20px;">
+                                <h1>Resposta correta</h1>
+                                <p style="margin-top: 15px;">
+                                    Parabéns! As principais barreiras são as dificuldades no acesso a medicamentos,
+                                    consultas e testes diagnósticos, quando as pessoas precisam pagar por estes;
+                                    dificuldades em garantir uma alimentação saudável e completa, devido a limitações
+                                    socioeconômicas; despreparo de profissionais para lidar com diversidade ou atitudes
+                                    desrespeitosas ao se relacionar com usuários do SUS; horários limitados ou distância
+                                    dos serviços de saúde da residência dos usuários.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-fechar">
-                        <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
+                        <div class="modal-fechar">
+                            <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="margin-top: -280px; margin-left: 180px; width: 500px; height: 150px;" id="feedErrado">
-        <div class="objetivo animate__animated animate__pulse">
-            <div style="margin-top: -95px;">
-                <img class="icone-image" style="width: 11%; margin-right: -3%; margin-top: -24px;"
-                    src="recursos/icones/RM_M1A1_Icones10.svg">
-                <div class="box-click" style="width:450px;margin: 0;">
-                    <div class="line-box">
-                        <div style="margin-left: 20px;">
-                            <h1>Resposta incorreta</h1>
-                            <p style="margin-top: 15px;">
-                                A sequência correta é a letra “1-5-4-3-2”. As dimensões de análise visam cobrir
-                                diferentes facetas da relação entre processos de implementação e suas interfaces com
-                                a
-                                reprodução de desigualdades sociais. Isto é, tais dimensões apontam para diferentes
-                                formas de se perceber a manifestação de riscos de exclusão, desatenção e reprodução
-                                de
-                                desigualdades nos processos de implementação.
-                            </p>
+        <div style="position: absolute; width: 500px; left: 21%; top: 27%; height: 150px; display: none;"
+            id="feedErrado">
+            <div class="objetivo animate__animated animate__pulse">
+                <div>
+                    <img class="icone-image" style="width: 11%; margin-right: -6%; margin-top: -24px;"
+                        src="recursos/icones/RM_M1A1_Icones10.svg">
+                    <div class="box-click" style="width:468px; margin: 0;">
+                        <div class="line-box">
+                            <div style="margin-left: 20px;">
+                                <h1>Resposta incorreta</h1>
+                                <p style="margin-top: 15px;">
+                                    Na verdade, a alternativa correta é a letra “a”. As principais barreiras são as
+                                    dificuldades no acesso a medicamentos, consultas e testes diagnósticos, quando as
+                                    pessoas precisam pagar por estes; dificuldades em garantir uma alimentação saudável
+                                    e completa, devido a limitações socioeconômicas; despreparo de profissionais para
+                                    lidar com diversidade ou atitudes desrespeitosas ao se relacionar com usuários do
+                                    SUS; horários limitados ou distância dos serviços de saúde da residência dos
+                                    usuários.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-fechar">
-                        <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
+                        <div class="modal-fechar">
+                            <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,17 +140,11 @@
 </footer>
 <script>
     $(() => {
-        pontos = 0;
-        let respondido = [];
-        let gabarito = ["1", "5", "4", "3", "2"];
-        let comparacao = [];
-        let mostrarSub = true;
         let resposta = '';
-
+        let mostrarSub = true;
         let feedCerto = $(document).find('[id^=feedCerto]').hide();
         let feedErrado = $(document).find('[id^=feedErrado]').hide();
         let submeter = $(document).find('[class=submeter]').hide();
-        let questao = $(document).find('[id^=opc]');
 
         $(feedCerto).on('click', apagarFeeds);
         $(feedErrado).on('click', apagarFeeds);
@@ -194,33 +154,42 @@
             feedErrado.fadeOut();
         }
 
-        questao.map((index, sel) => {
-            respondido[index] = false;
-            comparacao[index] = false;
-            $(sel).click(responder);
-        });
-
-        function responder(sel) {
-            resposta = sel.target.id;
-            respondido[((sel.target.id).split("_")[1]) - 1] = true;
-            console.log(respondido);
-            if (mostrarSub && respondido.every(elem => elem == true)) {
-                submeter.fadeIn();
-            }
+        function desmarcarTudo() {
+            let questao = $(document).find('[id^=opc]').map((index, sel) => {
+                $(sel).removeClass("marcado");
+            })
         }
 
-        $(submeter).on('click', () => {
-            questao.map((index, selected) => {
-                if (selected.value.toUpperCase() == gabarito[index].toUpperCase()) {
-                    comparacao[index] = true;
+        let questao = $(document).find('[id^=opc]').map((index, sel) => {
+            $(sel).click(() => {
+                console.log(sel.id);
+                resposta = sel.id;
+                if (mostrarSub) {
+                    submeter.fadeIn();
                 }
-            })
 
-            if (comparacao.every(elem => elem == true)) {
+                desmarcarTudo();
+                $(sel).addClass("marcado");
+            })
+        })
+
+
+        $(submeter).on('click', () => {
+            console.log("clicou " + resposta.split("_")[1]);
+            if (resposta.split("_")[1] == "c") {
                 $(feedCerto).fadeIn();
                 pontos += 1;
                 mostrarSub = false;
                 submeter.hide();
+
+                // opacidade das questões erradas e marcação da questão certa
+
+                let questao = $(document).find('[id^=opc]').map((index, sel) => {
+                    $(sel).removeClass("questao").css("pointer-events", "none");
+
+                    let opacityWrong = $(document).find('[id^=opc_e]').addClass('opWrong');
+
+                })
             } else {
                 $(feedErrado).fadeIn();
             }

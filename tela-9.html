@@ -94,6 +94,24 @@
         width: 92%;
         margin: 35px auto;
     }
+
+    table {
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+        padding: 8px;
+    }
+
+    tr:nth-child(2) {
+        background-color: #d9e2f3;
+    }
+
+    tr:not(:nth-child(2)) {
+        background-color: #fbe4d5;
+    }
 </style>
 <div class="largura-1_1">
     <img style="width:100%;  right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
@@ -107,6 +125,8 @@
         <button class="tablinks bg-btn5" onclick="openTab(event, '4')">4</button>
         <button class="tablinks bg-btn5" onclick="openTab(event, '5')">5</button>
         <button class="tablinks bg-btn5" onclick="openTab(event, '6')">6</button>
+        <button class="tablinks bg-btn5" onclick="openTab(event, '7')">7</button>
+        <button class="tablinks bg-btn5" onclick="openTab(event, '8')">8</button>
     </div>
     <div id="0" class="tabcontent">
         <div style="margin:115px auto; width:61%;">
@@ -130,7 +150,7 @@
     <div id="2" class="tabcontent" style="display: block;">
         <div style="margin: 0px auto;display: flex;justify-content: space-between;">
             <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-                <a href="recursos/documentos/QUADRO1-gut.pdf" target="_blank"><img
+                <a href="recursos/documentos/Quadro_1___Matriz_GUT.docx" target="_blank"><img
                         src="recursos/imgs/CODEP_EPPS_M1U2_RIM_03.svg" style="width: 185px;"></a>
                 <p style="font-size: 12px;"><b>Clique</b> sobre o PDF e conheça a matriz.</p>
             </div>
@@ -188,13 +208,63 @@
     <div id="6" class="tabcontent" style="display: block;">
         <div style="margin: 0px auto;display: flex;justify-content: space-between;">
             <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-                <a href="recursos/documentos/politica_nacional_saude_populacao_negra_3d.pdf" target="_blank"><img
+                <a href="recursos/documentos/Quadro_2_-_Exemplo_de_ficha.docx" target="_blank"><img
                         src="recursos/imgs/CODEP_EPPS_M1U2_RIM_03.svg" style="width: 185px;"></a>
-                <p style="font-size: 12px;"><b>Clique</b> sobre o PDF e conheça a matriz.</p>
+                <p style="font-size: 12px;"><b>Clique</b> sobre o PDF e conheça a ficha.</p>
             </div>
             <div style="width: 394px;margin-top: 40px;display: flex;flex-direction: column;justify-content: center;">
                 <p>A ficha a ser utilizada pelos grupos está detalhada no PDF, com o exemplo que desenvolvemos da
                     Política Nacional de Saúde Integral da População Negra.</p>
+            </div>
+        </div>
+    </div>
+    <div id="7" class="tabcontent" style="display: block;">
+        <div style="margin: 115px auto auto 50px;">
+            <div style="width: 534px;">
+                <p>Para acessar a Política Nacional de Saúde Integral da População Negra clique no link: <a
+                        href="https://bvsms.saude.gov.br/bvs/publicacoes/politica_nacional_saude_populacao_negra_3d.pdf"
+                        target="_blank"
+                        style="color: #0E74F4;">https://bvsms.saude.gov.br/bvs/publicacoes/politica_nacional_saude_populacao_negra_3d.pdf</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="8" class="tabcontent" style="display: block;">
+        <div style="margin: 15px auto auto 50px;">
+            <div style="width: 534px;">
+                <p>A entrega da atividade será feita no AVA. A avaliação será feita conforme os critérios:</p>
+                <div>
+                    <table>
+                        <tr>
+                            <td colspan="2" style="text-align:center; font-weight:bold; font-size:larger;">AVALIAÇÃO DO
+                                ESTUDO DE CASO</td>
+                        </tr>
+                        <tr>
+                            <th>Critérios</th>
+                            <th>Avaliação</th>
+                        </tr>
+                        <tr>
+                            <td>Informações para avaliadores</td>
+                            <td>2 pontos</td>
+                        </tr>
+                        <tr>
+                            <td>Análise da relação da política com os princípios e as diretrizes do SUS</td>
+                            <td>4 pontos</td>
+                        </tr>
+                        <tr>
+                            <td>Levantamento de barreiras de equidade</td>
+                            <td>4 pontos</td>
+                        </tr>
+                        <tr>
+                            <td>Identificação de estratégias para enfrentar as barreiras de equidade</td>
+                            <td>4 pontos</td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td>10 pontos</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
